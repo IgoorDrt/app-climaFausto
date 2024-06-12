@@ -5,8 +5,7 @@ export default function NewsScreen() {
   const [news, setNews] = useState([]);
   useEffect(() => {
     fetch(
-    //   "https://newsapi.org/v2/top-headlines?country=us&apiKey=b7e0d030997c44b8958ec5989b78b509"
-      "https://newsapi.org/v2/everything?q=climate&from=2024-05-06&sortBy=publishedAt&apiKey=b7e0d030997c44b8958ec5989b78b509"
+      "https://newsapi.org/v2/everything?q=climate&from=2024-05-12&sortBy=publishedAt&apiKey=b7e0d030997c44b8958ec5989b78b509"
     )
       .then((response) => response.json())
       .then((data) => setNews(data.articles))
@@ -14,7 +13,7 @@ export default function NewsScreen() {
   }, []);
   return (
     <View>
-      <Text style={styles.titulo}>Welcome to CliNews!!</Text>
+      <Text style={styles.bemvindo}>Welcome to CliNews!!</Text>
       <FlatList
         data={news}
         keyExtractor={(item) => item.url}

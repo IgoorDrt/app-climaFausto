@@ -22,6 +22,10 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 18,
   },
+  bemvindo:{
+    fontSize: 25,
+    textAlign: "center",
+  },
   newsItem: {
     marginBottom: 15,
     padding: 15,
@@ -34,6 +38,6 @@ export const styles = StyleSheet.create({
     elevation: 3,
     width: '100%',
 },
-  button: { marginTop: 12 },
+  button: { marginTop: 12, paddingBottom: 12},
   error: { color: "red" },
 });
