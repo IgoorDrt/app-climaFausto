@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, FlatList } from "react-native";
 import { styles } from "../config/styles";
-import { Button } from "react-native-paper";
+
 export default function NewsScreen() {
   const [news, setNews] = useState([]);
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function NewsScreen() {
   return (
     <View>
       <Text style={styles.bemvindo}>Welcome to CliNews!!</Text>
-      <Button title="Localizacao"onPress={() => navigation.navigate("Localizacao")}>Localização</Button>
+      
       <FlatList
         data={news}
         keyExtractor={(item) => item.url}
@@ -26,6 +26,7 @@ export default function NewsScreen() {
           </View>
         )}
       />
+      
     </View>
   );
 }
